@@ -19,6 +19,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         requestAccessibilityPrivileges {
             self.setupHotKeys()
         }
+
+        if AXIsProcessTrusted() {
+            setupHotKeys()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
