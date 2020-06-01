@@ -11,6 +11,8 @@ import SwiftUI
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let statusItem = StatusItem()
+
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
