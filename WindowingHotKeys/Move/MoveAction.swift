@@ -29,7 +29,15 @@ extension MoveAction {
                 return
             }
 
-            execute(window: window, visibleScreenFrame: screen.visibleFrame)
+            let dockHeight = screen.visibleFrame.origin.y - screen.frame.origin.y
+            let visibleScreenFrame = CGRect(
+                x: screen.visibleFrame.origin.x,
+                y: screen.visibleFrame.origin.y - dockHeight,
+                width: screen.visibleFrame.size.width,
+                height: screen.visibleFrame.size.height
+            )
+
+            execute(window: window, visibleScreenFrame: visibleScreenFrame)
         }
     }
 }
