@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        HotKeyController.setupEventHandler()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
