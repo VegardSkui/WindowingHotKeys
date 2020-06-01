@@ -18,8 +18,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         requestAccessibilityPrivileges()
 
-        LeftAction.setupHotKey()
-        RightAction.setupHotKey()
+        LeftHalfAction.setupHotKey()
+        RightHalfAction.setupHotKey()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

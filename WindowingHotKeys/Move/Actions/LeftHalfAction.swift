@@ -1,5 +1,5 @@
 //
-//  LeftAction.swift
+//  LeftHalfAction.swift
 //  WindowingHotKeys
 //
 //  Created by Vegard Skui on 01/06/2020.
@@ -7,8 +7,9 @@
 //
 
 import Carbon
+import Cocoa
 
-class LeftAction: MoveAction {
+class LeftHalfAction: MoveAction {
     static let carbonKeyCode = UInt32(kVK_LeftArrow)
     static let carbonModifiers = UInt32(controlKey | optionKey)
 
@@ -17,8 +18,17 @@ class LeftAction: MoveAction {
             return
         }
 
-        var rect = window.rect
-        rect.origin.x -= 20
+        guard let screenFrame = NSScreen.main?.frame else {
+            return
+        }
+
+        let rect = CGRect(
+            x: screenFrame.origin.x,
+            y: screenFrame.origin.y,
+            width: screenFrame.size.width / 2,
+            height: screenFrame.size.height
+        )
+
         window.rect = rect
     }
 }

@@ -14,11 +14,11 @@
 		5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9422485220800C093A3 /* HotKeyController.swift */; };
 		5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */; };
 		5B65D94B24852D2700C093A3 /* MoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94A24852D2700C093A3 /* MoveAction.swift */; };
-		5B65D94D24852D5300C093A3 /* LeftAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94C24852D5300C093A3 /* LeftAction.swift */; };
+		5B65D94D24852D5300C093A3 /* LeftHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */; };
 		5B65D94F24852EFE00C093A3 /* AccessibilityWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94E24852EFE00C093A3 /* AccessibilityWindow.swift */; };
 		5B65D952248530DD00C093A3 /* AXError-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D951248530DD00C093A3 /* AXError-Extensions.swift */; };
 		5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D953248532B000C093A3 /* AXValue-Extensions.swift */; };
-		5B65D9582485743700C093A3 /* RightAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightAction.swift */; };
+		5B65D9582485743700C093A3 /* RightHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightHalfAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		5B65D9422485220800C093A3 /* HotKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyController.swift; sourceTree = "<group>"; };
 		5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAccessibilityPrivilegesView.swift; sourceTree = "<group>"; };
 		5B65D94A24852D2700C093A3 /* MoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAction.swift; sourceTree = "<group>"; };
-		5B65D94C24852D5300C093A3 /* LeftAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAction.swift; sourceTree = "<group>"; };
+		5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHalfAction.swift; sourceTree = "<group>"; };
 		5B65D94E24852EFE00C093A3 /* AccessibilityWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityWindow.swift; sourceTree = "<group>"; };
 		5B65D951248530DD00C093A3 /* AXError-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXError-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D953248532B000C093A3 /* AXValue-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXValue-Extensions.swift"; sourceTree = "<group>"; };
-		5B65D9572485743700C093A3 /* RightAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightAction.swift; sourceTree = "<group>"; };
+		5B65D9572485743700C093A3 /* RightHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 		5B65D94924852D1000C093A3 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				5B65D94C24852D5300C093A3 /* LeftAction.swift */,
-				5B65D9572485743700C093A3 /* RightAction.swift */,
+				5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */,
+				5B65D9572485743700C093A3 /* RightHalfAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -199,8 +199,8 @@
 				5B65D952248530DD00C093A3 /* AXError-Extensions.swift in Sources */,
 				5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */,
 				5B65D9412485220000C093A3 /* HotKey.swift in Sources */,
-				5B65D94D24852D5300C093A3 /* LeftAction.swift in Sources */,
-				5B65D9582485743700C093A3 /* RightAction.swift in Sources */,
+				5B65D94D24852D5300C093A3 /* LeftHalfAction.swift in Sources */,
+				5B65D9582485743700C093A3 /* RightHalfAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
