@@ -17,6 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         HotKeyController.setupEventHandler()
 
         requestAccessibilityPrivileges()
+
+        LeftAction.setupHotKey()
+        RightAction.setupHotKey()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -57,4 +60,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 }
-
