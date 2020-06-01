@@ -12,6 +12,7 @@
 		5B65D9302485207F00C093A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B65D92E2485207F00C093A3 /* Main.storyboard */; };
 		5B65D9412485220000C093A3 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9402485220000C093A3 /* HotKey.swift */; };
 		5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9422485220800C093A3 /* HotKeyController.swift */; };
+		5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5B65D9392485210D00C093A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5B65D9402485220000C093A3 /* HotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
 		5B65D9422485220800C093A3 /* HotKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyController.swift; sourceTree = "<group>"; };
+		5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAccessibilityPrivilegesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				5B65D93F248521F500C093A3 /* HotKey */,
 				5B65D9252485207D00C093A3 /* AppDelegate.swift */,
+				5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */,
 				5B65D9292485207F00C093A3 /* Assets.xcassets */,
 				5B65D92E2485207F00C093A3 /* Main.storyboard */,
 				5B65D9312485207F00C093A3 /* Info.plist */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */,
 				5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */,
 				5B65D9262485207D00C093A3 /* AppDelegate.swift in Sources */,
 				5B65D9412485220000C093A3 /* HotKey.swift in Sources */,
