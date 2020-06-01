@@ -22,7 +22,24 @@
 		5BE560CE2485938000AD828C /* TopHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CD2485938000AD828C /* TopHalfAction.swift */; };
 		5BE560D0248593A800AD828C /* BottomHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CF248593A800AD828C /* BottomHalfAction.swift */; };
 		5BE560D2248598FD00AD828C /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D1248598FD00AD828C /* StatusItem.swift */; };
+		5BE560DA2485A28700AD828C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D92485A28700AD828C /* AppDelegate.swift */; };
+		5BE560DE2485A28900AD828C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE560DD2485A28900AD828C /* Assets.xcassets */; };
+		5BE560E42485A28900AD828C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE560E22485A28900AD828C /* Main.storyboard */; };
+		5BE560EB2485A31A00AD828C /* WindowingHotKeysLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BE560EA2485A2FD00AD828C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				5BE560EB2485A31A00AD828C /* WindowingHotKeysLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B65D9222485207D00C093A3 /* WindowingHotKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +61,23 @@
 		5BE560CD2485938000AD828C /* TopHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHalfAction.swift; sourceTree = "<group>"; };
 		5BE560CF248593A800AD828C /* BottomHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHalfAction.swift; sourceTree = "<group>"; };
 		5BE560D1248598FD00AD828C /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeysLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE560D92485A28700AD828C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BE560DD2485A28900AD828C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BE560E32485A28900AD828C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BE560E52485A28900AD828C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE560E62485A28900AD828C /* WindowingHotKeysLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindowingHotKeysLauncher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5B65D91F2485207D00C093A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE560D42485A28700AD828C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +92,7 @@
 			children = (
 				5B65D9392485210D00C093A3 /* README.md */,
 				5B65D9242485207D00C093A3 /* WindowingHotKeys */,
+				5BE560D82485A28700AD828C /* WindowingHotKeysLauncher */,
 				5B65D9232485207D00C093A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5B65D9222485207D00C093A3 /* WindowingHotKeys.app */,
+				5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +162,18 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5BE560D82485A28700AD828C /* WindowingHotKeysLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				5BE560D92485A28700AD828C /* AppDelegate.swift */,
+				5BE560DD2485A28900AD828C /* Assets.xcassets */,
+				5BE560E22485A28900AD828C /* Main.storyboard */,
+				5BE560E52485A28900AD828C /* Info.plist */,
+				5BE560E62485A28900AD828C /* WindowingHotKeysLauncher.entitlements */,
+			);
+			path = WindowingHotKeysLauncher;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,6 +184,7 @@
 				5B65D91E2485207D00C093A3 /* Sources */,
 				5B65D91F2485207D00C093A3 /* Frameworks */,
 				5B65D9202485207D00C093A3 /* Resources */,
+				5BE560EA2485A2FD00AD828C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -148,6 +193,23 @@
 			name = WindowingHotKeys;
 			productName = WindowingHotKeys;
 			productReference = 5B65D9222485207D00C093A3 /* WindowingHotKeys.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BE560D62485A28700AD828C /* WindowingHotKeysLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BE560E72485A28900AD828C /* Build configuration list for PBXNativeTarget "WindowingHotKeysLauncher" */;
+			buildPhases = (
+				5BE560D32485A28700AD828C /* Sources */,
+				5BE560D42485A28700AD828C /* Frameworks */,
+				5BE560D52485A28700AD828C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WindowingHotKeysLauncher;
+			productName = WindowingHotKeysLauncher;
+			productReference = 5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,6 +223,9 @@
 				ORGANIZATIONNAME = "Vegard Skui";
 				TargetAttributes = {
 					5B65D9212485207D00C093A3 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5BE560D62485A28700AD828C = {
 						CreatedOnToolsVersion = 11.5;
 					};
 				};
@@ -179,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				5B65D9212485207D00C093A3 /* WindowingHotKeys */,
+				5BE560D62485A28700AD828C /* WindowingHotKeysLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +256,15 @@
 			files = (
 				5B65D9302485207F00C093A3 /* Main.storyboard in Resources */,
 				5B65D92A2485207F00C093A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE560D52485A28700AD828C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE560E42485A28900AD828C /* Main.storyboard in Resources */,
+				5BE560DE2485A28900AD828C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +291,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BE560D32485A28700AD828C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE560DA2485A28700AD828C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -223,6 +306,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B65D92F2485207F00C093A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BE560E22485A28900AD828C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BE560E32485A28900AD828C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -389,6 +480,54 @@
 			};
 			name = Release;
 		};
+		5BE560E82485A28900AD828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WindowingHotKeysLauncher/WindowingHotKeysLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = DHBK22HHBU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WindowingHotKeysLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vegardskui.WindowingHotKeysLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5BE560E92485A28900AD828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WindowingHotKeysLauncher/WindowingHotKeysLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = DHBK22HHBU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WindowingHotKeysLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vegardskui.WindowingHotKeysLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -406,6 +545,15 @@
 			buildConfigurations = (
 				5B65D9362485207F00C093A3 /* Debug */,
 				5B65D9372485207F00C093A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BE560E72485A28900AD828C /* Build configuration list for PBXNativeTarget "WindowingHotKeysLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BE560E82485A28900AD828C /* Debug */,
+				5BE560E92485A28900AD828C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
