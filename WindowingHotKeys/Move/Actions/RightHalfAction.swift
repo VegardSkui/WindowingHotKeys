@@ -13,23 +13,13 @@ class RightHalfAction: MoveAction {
     static let carbonKeyCode = UInt32(kVK_RightArrow)
     static let carbonModifiers = UInt32(controlKey | optionKey)
 
-    static func execute() {
-        guard let window = AccessibilityWindow.frontmost() else {
-            return
-        }
-
-        guard let screenFrame = NSScreen.main?.frame else {
-            return
-        }
-
-        let halfScreenWidth = screenFrame.size.width / 2
-        let rect = CGRect(
-            x: screenFrame.origin.x + halfScreenWidth,
-            y: screenFrame.origin.y,
+    static func execute(window: AccessibilityWindow, visibleScreenFrame: CGRect) {
+        let halfScreenWidth = visibleScreenFrame.size.width / 2
+        window.rect = CGRect(
+            x: visibleScreenFrame.origin.x + halfScreenWidth,
+            y: visibleScreenFrame.origin.y,
             width: halfScreenWidth,
-            height: screenFrame.size.height
+            height: visibleScreenFrame.size.height
         )
-
-        window.rect = rect
     }
 }
