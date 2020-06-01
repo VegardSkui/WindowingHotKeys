@@ -29,8 +29,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func setupHotKeys() {
+        BottomHalfAction.setupHotKey()
         LeftHalfAction.setupHotKey()
         RightHalfAction.setupHotKey()
+        TopHalfAction.setupHotKey()
     }
 
     // MARK: - Request Accessibility Privileges
