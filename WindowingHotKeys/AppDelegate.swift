@@ -16,20 +16,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         HotKeyController.setupEventHandler()
 
-        requestAccessibilityPrivileges()
-
-        LeftHalfAction.setupHotKey()
-        RightHalfAction.setupHotKey()
+        requestAccessibilityPrivileges {
+            self.setupHotKeys()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
+    }
+
+    private func setupHotKeys() {
+        LeftHalfAction.setupHotKey()
+        RightHalfAction.setupHotKey()
     }
 
     // MARK: - Request Accessibility Privileges
 
     private var requestWindow: NSWindow!
 
-    private func requestAccessibilityPrivileges() {
+    private func requestAccessibilityPrivileges(completion: @escaping () -> Void) {
         if AXIsProcessTrusted() {
             return
         }
@@ -47,13 +51,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         requestWindow.contentView = NSHostingView(rootView: view)
         requestWindow.makeKeyAndOrderFront(nil)
 
-        pollAccessibilityPrivileges() {}
+        pollAccessibilityPrivileges(completion: completion)
     }
 
     private func pollAccessibilityPrivileges(completion: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if AXIsProcessTrusted() {
                 self.requestWindow.close()
+                completion()
             } else {
                 self.pollAccessibilityPrivileges(completion: completion)
             }
