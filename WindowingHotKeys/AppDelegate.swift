@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func setupHotKeys() {
         BottomHalfAction.setupHotKey()
+        CenterAction.setupHotKey()
         LeftHalfAction.setupHotKey()
         MaximizeAction.setupHotKey()
         RightHalfAction.setupHotKey()
