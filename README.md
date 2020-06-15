@@ -1,6 +1,10 @@
 # WindowingHotKeys
 
+A simple zero-dependency window manager for macOS.
+
 ## Usage
+
+Move and resize windows with global hot keys.
 
 | Hot Key                                    | Description          |
 | ------------------------------------------ | -------------------- |
