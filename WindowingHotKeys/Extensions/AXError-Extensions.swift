@@ -10,7 +10,7 @@ import Foundation
 
 extension AXError: CustomStringConvertible {
     fileprivate var valueAsString: String {
-        switch (self) {
+        switch self {
             case .apiDisabled:
                 return "apiDisabled"
             case .actionUnsupported:
