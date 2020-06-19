@@ -12,6 +12,7 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = StatusItem()
+    let windowManager = WindowManager()
 
     var window: NSWindow!
 
@@ -19,28 +20,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         HotKeyController.setupEventHandler()
 
         requestAccessibilityPrivileges {
-            self.setupHotKeys()
+            self.windowManager.setupHotKeys()
         }
 
         if AXIsProcessTrusted() {
-            setupHotKeys()
+            windowManager.setupHotKeys()
         }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-    }
-
-    private func setupHotKeys() {
-        BottomHalfAction.setupHotKey()
-        BottomLeftQuarterAction.setupHotKey()
-        BottomRightQuarterAction.setupHotKey()
-        CenterAction.setupHotKey()
-        LeftHalfAction.setupHotKey()
-        MaximizeAction.setupHotKey()
-        RightHalfAction.setupHotKey()
-        TopHalfAction.setupHotKey()
-        TopLeftQuarterAction.setupHotKey()
-        TopRightQuarterAction.setupHotKey()
     }
 
     // MARK: - Request Accessibility Privileges

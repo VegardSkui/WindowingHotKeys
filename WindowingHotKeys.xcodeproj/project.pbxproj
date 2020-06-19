@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0893D3249D5624002A67FC /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0893D2249D5624002A67FC /* WindowManager.swift */; };
+		5B0893D5249D5667002A67FC /* WindowMoveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0893D4249D5667002A67FC /* WindowMoveCalculator.swift */; };
 		5B65D9262485207D00C093A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9252485207D00C093A3 /* AppDelegate.swift */; };
 		5B65D92A2485207F00C093A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B65D9292485207F00C093A3 /* Assets.xcassets */; };
 		5B65D9302485207F00C093A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B65D92E2485207F00C093A3 /* Main.storyboard */; };
@@ -14,19 +16,19 @@
 		5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9422485220800C093A3 /* HotKeyController.swift */; };
 		5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */; };
 		5B65D94B24852D2700C093A3 /* MoveAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94A24852D2700C093A3 /* MoveAction.swift */; };
-		5B65D94D24852D5300C093A3 /* LeftHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */; };
+		5B65D94D24852D5300C093A3 /* LeftHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94C24852D5300C093A3 /* LeftHalfCalculator.swift */; };
 		5B65D94F24852EFE00C093A3 /* AccessibilityWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D94E24852EFE00C093A3 /* AccessibilityWindow.swift */; };
 		5B65D952248530DD00C093A3 /* AXError-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D951248530DD00C093A3 /* AXError-Extensions.swift */; };
 		5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D953248532B000C093A3 /* AXValue-Extensions.swift */; };
-		5B65D9582485743700C093A3 /* RightHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightHalfAction.swift */; };
-		5BB55848248798C800D5E822 /* MaximizeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB55847248798C800D5E822 /* MaximizeAction.swift */; };
-		5BB5584A2487998700D5E822 /* CenterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB558492487998700D5E822 /* CenterAction.swift */; };
-		5BB5584C24879B1700D5E822 /* BottomLeftQuarterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584B24879B1700D5E822 /* BottomLeftQuarterAction.swift */; };
-		5BB5584E24879B5000D5E822 /* BottomRightQuarterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584D24879B5000D5E822 /* BottomRightQuarterAction.swift */; };
-		5BB5585024879B7D00D5E822 /* TopLeftQuarterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584F24879B7D00D5E822 /* TopLeftQuarterAction.swift */; };
-		5BB5585224879B9500D5E822 /* TopRightQuarterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5585124879B9500D5E822 /* TopRightQuarterAction.swift */; };
-		5BE560CE2485938000AD828C /* TopHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CD2485938000AD828C /* TopHalfAction.swift */; };
-		5BE560D0248593A800AD828C /* BottomHalfAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CF248593A800AD828C /* BottomHalfAction.swift */; };
+		5B65D9582485743700C093A3 /* RightHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightHalfCalculator.swift */; };
+		5BB55848248798C800D5E822 /* MaximizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB55847248798C800D5E822 /* MaximizeCalculator.swift */; };
+		5BB5584A2487998700D5E822 /* CenterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB558492487998700D5E822 /* CenterCalculator.swift */; };
+		5BB5584C24879B1700D5E822 /* BottomLeftQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */; };
+		5BB5584E24879B5000D5E822 /* BottomRightQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584D24879B5000D5E822 /* BottomRightQuarterCalculator.swift */; };
+		5BB5585024879B7D00D5E822 /* TopLeftQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584F24879B7D00D5E822 /* TopLeftQuarterCalculator.swift */; };
+		5BB5585224879B9500D5E822 /* TopRightQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5585124879B9500D5E822 /* TopRightQuarterCalculator.swift */; };
+		5BE560CE2485938000AD828C /* TopHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CD2485938000AD828C /* TopHalfCalculator.swift */; };
+		5BE560D0248593A800AD828C /* BottomHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CF248593A800AD828C /* BottomHalfCalculator.swift */; };
 		5BE560D2248598FD00AD828C /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D1248598FD00AD828C /* StatusItem.swift */; };
 		5BE560DA2485A28700AD828C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D92485A28700AD828C /* AppDelegate.swift */; };
 		5BE560DE2485A28900AD828C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE560DD2485A28900AD828C /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0893D2249D5624002A67FC /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		5B0893D4249D5667002A67FC /* WindowMoveCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowMoveCalculator.swift; sourceTree = "<group>"; };
 		5B65D9222485207D00C093A3 /* WindowingHotKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B65D9252485207D00C093A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B65D9292485207F00C093A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,19 +63,19 @@
 		5B65D9422485220800C093A3 /* HotKeyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyController.swift; sourceTree = "<group>"; };
 		5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAccessibilityPrivilegesView.swift; sourceTree = "<group>"; };
 		5B65D94A24852D2700C093A3 /* MoveAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveAction.swift; sourceTree = "<group>"; };
-		5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHalfAction.swift; sourceTree = "<group>"; };
+		5B65D94C24852D5300C093A3 /* LeftHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftHalfCalculator.swift; sourceTree = "<group>"; };
 		5B65D94E24852EFE00C093A3 /* AccessibilityWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityWindow.swift; sourceTree = "<group>"; };
 		5B65D951248530DD00C093A3 /* AXError-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXError-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D953248532B000C093A3 /* AXValue-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXValue-Extensions.swift"; sourceTree = "<group>"; };
-		5B65D9572485743700C093A3 /* RightHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfAction.swift; sourceTree = "<group>"; };
-		5BB55847248798C800D5E822 /* MaximizeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeAction.swift; sourceTree = "<group>"; };
-		5BB558492487998700D5E822 /* CenterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAction.swift; sourceTree = "<group>"; };
-		5BB5584B24879B1700D5E822 /* BottomLeftQuarterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLeftQuarterAction.swift; sourceTree = "<group>"; };
-		5BB5584D24879B5000D5E822 /* BottomRightQuarterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomRightQuarterAction.swift; sourceTree = "<group>"; };
-		5BB5584F24879B7D00D5E822 /* TopLeftQuarterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftQuarterAction.swift; sourceTree = "<group>"; };
-		5BB5585124879B9500D5E822 /* TopRightQuarterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRightQuarterAction.swift; sourceTree = "<group>"; };
-		5BE560CD2485938000AD828C /* TopHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHalfAction.swift; sourceTree = "<group>"; };
-		5BE560CF248593A800AD828C /* BottomHalfAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHalfAction.swift; sourceTree = "<group>"; };
+		5B65D9572485743700C093A3 /* RightHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfCalculator.swift; sourceTree = "<group>"; };
+		5BB55847248798C800D5E822 /* MaximizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeCalculator.swift; sourceTree = "<group>"; };
+		5BB558492487998700D5E822 /* CenterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCalculator.swift; sourceTree = "<group>"; };
+		5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLeftQuarterCalculator.swift; sourceTree = "<group>"; };
+		5BB5584D24879B5000D5E822 /* BottomRightQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomRightQuarterCalculator.swift; sourceTree = "<group>"; };
+		5BB5584F24879B7D00D5E822 /* TopLeftQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLeftQuarterCalculator.swift; sourceTree = "<group>"; };
+		5BB5585124879B9500D5E822 /* TopRightQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRightQuarterCalculator.swift; sourceTree = "<group>"; };
+		5BE560CD2485938000AD828C /* TopHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHalfCalculator.swift; sourceTree = "<group>"; };
+		5BE560CF248593A800AD828C /* BottomHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHalfCalculator.swift; sourceTree = "<group>"; };
 		5BE560D1248598FD00AD828C /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeysLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE560D92485A28700AD828C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,11 +127,14 @@
 			children = (
 				5B65D950248530CD00C093A3 /* Extensions */,
 				5B65D93F248521F500C093A3 /* HotKey */,
-				5B65D94624852CAF00C093A3 /* Move */,
+				5B65D94924852D1000C093A3 /* Calculators */,
 				5B65D94E24852EFE00C093A3 /* AccessibilityWindow.swift */,
 				5B65D9252485207D00C093A3 /* AppDelegate.swift */,
 				5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */,
 				5BE560D1248598FD00AD828C /* StatusItem.swift */,
+				5B65D94A24852D2700C093A3 /* MoveAction.swift */,
+				5B0893D4249D5667002A67FC /* WindowMoveCalculator.swift */,
+				5B0893D2249D5624002A67FC /* WindowManager.swift */,
 				5B65D9292485207F00C093A3 /* Assets.xcassets */,
 				5B65D92E2485207F00C093A3 /* Main.storyboard */,
 				5B65D9312485207F00C093A3 /* Info.plist */,
@@ -145,30 +152,21 @@
 			path = HotKey;
 			sourceTree = "<group>";
 		};
-		5B65D94624852CAF00C093A3 /* Move */ = {
+		5B65D94924852D1000C093A3 /* Calculators */ = {
 			isa = PBXGroup;
 			children = (
-				5B65D94924852D1000C093A3 /* Actions */,
-				5B65D94A24852D2700C093A3 /* MoveAction.swift */,
+				5BE560CD2485938000AD828C /* TopHalfCalculator.swift */,
+				5B65D9572485743700C093A3 /* RightHalfCalculator.swift */,
+				5BE560CF248593A800AD828C /* BottomHalfCalculator.swift */,
+				5B65D94C24852D5300C093A3 /* LeftHalfCalculator.swift */,
+				5BB5585124879B9500D5E822 /* TopRightQuarterCalculator.swift */,
+				5BB5584D24879B5000D5E822 /* BottomRightQuarterCalculator.swift */,
+				5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */,
+				5BB5584F24879B7D00D5E822 /* TopLeftQuarterCalculator.swift */,
+				5BB55847248798C800D5E822 /* MaximizeCalculator.swift */,
+				5BB558492487998700D5E822 /* CenterCalculator.swift */,
 			);
-			path = Move;
-			sourceTree = "<group>";
-		};
-		5B65D94924852D1000C093A3 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				5BE560CF248593A800AD828C /* BottomHalfAction.swift */,
-				5BB5584B24879B1700D5E822 /* BottomLeftQuarterAction.swift */,
-				5BB5584D24879B5000D5E822 /* BottomRightQuarterAction.swift */,
-				5BB558492487998700D5E822 /* CenterAction.swift */,
-				5B65D94C24852D5300C093A3 /* LeftHalfAction.swift */,
-				5BB55847248798C800D5E822 /* MaximizeAction.swift */,
-				5B65D9572485743700C093A3 /* RightHalfAction.swift */,
-				5BE560CD2485938000AD828C /* TopHalfAction.swift */,
-				5BB5584F24879B7D00D5E822 /* TopLeftQuarterAction.swift */,
-				5BB5585124879B9500D5E822 /* TopRightQuarterAction.swift */,
-			);
-			path = Actions;
+			path = Calculators;
 			sourceTree = "<group>";
 		};
 		5B65D950248530CD00C093A3 /* Extensions */ = {
@@ -294,24 +292,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B65D94B24852D2700C093A3 /* MoveAction.swift in Sources */,
-				5BB5585024879B7D00D5E822 /* TopLeftQuarterAction.swift in Sources */,
-				5BB5584E24879B5000D5E822 /* BottomRightQuarterAction.swift in Sources */,
+				5BB5585024879B7D00D5E822 /* TopLeftQuarterCalculator.swift in Sources */,
+				5BB5584E24879B5000D5E822 /* BottomRightQuarterCalculator.swift in Sources */,
 				5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */,
+				5B0893D5249D5667002A67FC /* WindowMoveCalculator.swift in Sources */,
 				5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */,
-				5BE560D0248593A800AD828C /* BottomHalfAction.swift in Sources */,
+				5BE560D0248593A800AD828C /* BottomHalfCalculator.swift in Sources */,
 				5B65D9262485207D00C093A3 /* AppDelegate.swift in Sources */,
 				5BE560D2248598FD00AD828C /* StatusItem.swift in Sources */,
 				5B65D94F24852EFE00C093A3 /* AccessibilityWindow.swift in Sources */,
-				5BE560CE2485938000AD828C /* TopHalfAction.swift in Sources */,
+				5B0893D3249D5624002A67FC /* WindowManager.swift in Sources */,
+				5BE560CE2485938000AD828C /* TopHalfCalculator.swift in Sources */,
 				5B65D952248530DD00C093A3 /* AXError-Extensions.swift in Sources */,
-				5BB5585224879B9500D5E822 /* TopRightQuarterAction.swift in Sources */,
+				5BB5585224879B9500D5E822 /* TopRightQuarterCalculator.swift in Sources */,
 				5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */,
-				5BB5584C24879B1700D5E822 /* BottomLeftQuarterAction.swift in Sources */,
+				5BB5584C24879B1700D5E822 /* BottomLeftQuarterCalculator.swift in Sources */,
 				5B65D9412485220000C093A3 /* HotKey.swift in Sources */,
-				5BB55848248798C800D5E822 /* MaximizeAction.swift in Sources */,
-				5B65D94D24852D5300C093A3 /* LeftHalfAction.swift in Sources */,
-				5BB5584A2487998700D5E822 /* CenterAction.swift in Sources */,
-				5B65D9582485743700C093A3 /* RightHalfAction.swift in Sources */,
+				5BB55848248798C800D5E822 /* MaximizeCalculator.swift in Sources */,
+				5B65D94D24852D5300C093A3 /* LeftHalfCalculator.swift in Sources */,
+				5BB5584A2487998700D5E822 /* CenterCalculator.swift in Sources */,
+				5B65D9582485743700C093A3 /* RightHalfCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
