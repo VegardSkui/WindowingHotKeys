@@ -14,10 +14,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let mainBundleIdentifier = "com.vegardskui.WindowingHotKeys"
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Determine if the main application is already running
         let isRunning = !NSRunningApplication.runningApplications(
             withBundleIdentifier: mainBundleIdentifier
         ).isEmpty
 
+        // If it's not running, find the root location of the whole application
+        // bundle and launch it, this will launch the main application
         if !isRunning {
             let pathComponents = (Bundle.main.bundlePath as NSString).pathComponents
             let mainPath = NSString.path(
@@ -26,6 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSWorkspace.shared.launchApplication(mainPath)
         }
 
+        // Terminate the launcher app
         NSApp.terminate(nil)
     }
 }
