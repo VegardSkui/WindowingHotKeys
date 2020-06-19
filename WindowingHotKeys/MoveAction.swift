@@ -21,6 +21,7 @@ enum MoveAction: CaseIterable {
 
     case maximize
     case center
+    case restore
 
     var carbonKeyCode: UInt32 {
         switch self {
@@ -36,6 +37,7 @@ enum MoveAction: CaseIterable {
 
             case .maximize: return UInt32(kVK_Return)
             case .center: return UInt32(kVK_ANSI_C)
+            case .restore: return UInt32(kVK_Delete)
         }
     }
 }

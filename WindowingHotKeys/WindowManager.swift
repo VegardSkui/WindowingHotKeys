@@ -25,9 +25,27 @@ class WindowManager {
         .center: CenterCalculator()
     ]
 
+    private var lastUserPositionedRect = [Int: CGRect]()
+    private var lastAppPositionedRect = [Int: CGRect]()
+
     func execute(action: MoveAction) {
         guard let window = AccessibilityWindow.frontmost() else { return }
         guard let screen = NSScreen.main else { return }
+
+        if action == .restore {
+            restore(window: window)
+            return
+        }
+
+        // Update the last user positioned rect entry if the current rect is not
+        // equal to the last app positioned rect
+        // Note that the force unwrap is safe since the if-statement would
+        // short-circuit if the identifier is not present in the dictionary
+        if let identifier = window.identifier,
+            !lastAppPositionedRect.keys.contains(identifier)
+            || !window.rect.equalTo(lastAppPositionedRect[identifier]!) {
+            lastUserPositionedRect[identifier] = window.rect
+        }
 
         // Calculate the screen frame available to the application, this is the
         // whole screen minus the space used by the menu bar and dock
@@ -39,7 +57,16 @@ class WindowManager {
             height: screen.visibleFrame.size.height
         )
 
-        window.rect = calculators[action]!.calculate(window: window, availableScreenFrame: availableScreenFrame)
+        // Calculate the new window rect and move
+        window.rect = calculators[action]!.calculate(
+            window: window,
+            availableScreenFrame: availableScreenFrame
+        )
+
+        // Update the last app positioned rect entry
+        if let identifier = window.identifier {
+            lastAppPositionedRect[identifier] = window.rect
+        }
     }
 
     func setupHotKeys() {
@@ -51,5 +78,12 @@ class WindowManager {
                 self.execute(action: action)
             }
         }
+    }
+
+    private func restore(window: AccessibilityWindow) {
+        guard let identifier = window.identifier else { return }
+        guard let lastUserPositionedRect = lastUserPositionedRect[identifier] else { return }
+
+        window.rect = lastUserPositionedRect
     }
 }

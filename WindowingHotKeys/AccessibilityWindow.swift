@@ -104,4 +104,33 @@ class AccessibilityWindow {
             size = newValue.size
         }
     }
+
+    lazy private var pid: pid_t? = {
+        var pid: pid_t = 0
+        let error = AXUIElementGetPid(element, &pid)
+        return error == .success ? pid : nil
+    }()
+
+    lazy var identifier: Int? = {
+        guard let pid = pid else { return nil }
+
+        guard let windowList = CGWindowListCopyWindowInfo(.optionOnScreenOnly, kCGNullWindowID) as? Array<Dictionary<CFString, AnyObject>> else {
+            print("Could not get window list")
+            return nil
+        }
+
+        // Let each window owned by the same process and with the same size and position be a potetial window
+        let potentialWindows = windowList.filter { info in
+            let rect = self.rect
+            let bounds = info[kCGWindowBounds] as! Dictionary<String, CGFloat>
+            return info[kCGWindowOwnerPID] as! pid_t == pid
+                && bounds["X"] == rect.origin.x
+                && bounds["Y"] == rect.origin.y
+                && bounds["Width"] == rect.size.width
+                && bounds["Height"] == rect.size.height
+        }
+
+        // Assume the first matching window is the correct one as we have no way of verifying further
+        return potentialWindows.first?[kCGWindowNumber] as? Int
+    }()
 }
