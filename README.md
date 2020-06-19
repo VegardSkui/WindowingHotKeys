@@ -18,3 +18,4 @@ Move and resize windows with global hot keys.
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>K</kbd> | Bottom Right Quarter |
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>⏎</kbd> | Maximize             |
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>C</kbd> | Center               |
+| <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>⌫</kbd> | Restore              |
