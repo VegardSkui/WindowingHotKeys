@@ -17,7 +17,7 @@ struct RequestAccessibilityPrivilegesView: View {
             }) {
                 Text("Open System Preferences")
             }
-        }
+        }.padding()
     }
 }
 
