@@ -100,6 +100,8 @@ class AccessibilityWindow {
             return CGRect(origin: position, size: size)
         }
         set {
+            // Size needs to be set both before and after position to ensure the correct result
+            size = newValue.size
             position = newValue.origin
             size = newValue.size
         }
