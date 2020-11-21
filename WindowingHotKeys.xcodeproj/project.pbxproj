@@ -11,7 +11,6 @@
 		5B0893D5249D5667002A67FC /* WindowMoveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0893D4249D5667002A67FC /* WindowMoveCalculator.swift */; };
 		5B65D9262485207D00C093A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9252485207D00C093A3 /* AppDelegate.swift */; };
 		5B65D92A2485207F00C093A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B65D9292485207F00C093A3 /* Assets.xcassets */; };
-		5B65D9302485207F00C093A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B65D92E2485207F00C093A3 /* Main.storyboard */; };
 		5B65D9412485220000C093A3 /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9402485220000C093A3 /* HotKey.swift */; };
 		5B65D9432485220800C093A3 /* HotKeyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9422485220800C093A3 /* HotKeyController.swift */; };
 		5B65D945248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */; };
@@ -22,6 +21,7 @@
 		5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D953248532B000C093A3 /* AXValue-Extensions.swift */; };
 		5B65D9582485743700C093A3 /* RightHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightHalfCalculator.swift */; };
 		5B77430B25693EB4008D706C /* WindowingHotKeysLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */; };
+		5BAC768225694DE8007CF286 /* WindowingHotKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC768125694DE8007CF286 /* WindowingHotKeys.swift */; };
 		5BB55848248798C800D5E822 /* MaximizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB55847248798C800D5E822 /* MaximizeCalculator.swift */; };
 		5BB5584A2487998700D5E822 /* CenterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB558492487998700D5E822 /* CenterCalculator.swift */; };
 		5BB5584C24879B1700D5E822 /* BottomLeftQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */; };
@@ -53,7 +53,6 @@
 		5B65D9222485207D00C093A3 /* WindowingHotKeys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B65D9252485207D00C093A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B65D9292485207F00C093A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5B65D92F2485207F00C093A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B65D9312485207F00C093A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B65D9322485207F00C093A3 /* WindowingHotKeys.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindowingHotKeys.entitlements; sourceTree = "<group>"; };
 		5B65D9392485210D00C093A3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		5B65D953248532B000C093A3 /* AXValue-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXValue-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D9572485743700C093A3 /* RightHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfCalculator.swift; sourceTree = "<group>"; };
 		5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowingHotKeysLauncher.swift; sourceTree = "<group>"; };
+		5BAC768125694DE8007CF286 /* WindowingHotKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowingHotKeys.swift; sourceTree = "<group>"; };
 		5BB55847248798C800D5E822 /* MaximizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeCalculator.swift; sourceTree = "<group>"; };
 		5BB558492487998700D5E822 /* CenterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCalculator.swift; sourceTree = "<group>"; };
 		5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLeftQuarterCalculator.swift; sourceTree = "<group>"; };
@@ -129,10 +129,10 @@
 				5B65D944248527FC00C093A3 /* RequestAccessibilityPrivilegesView.swift */,
 				5BE560D1248598FD00AD828C /* StatusItem.swift */,
 				5B65D94A24852D2700C093A3 /* MoveAction.swift */,
+				5BAC768125694DE8007CF286 /* WindowingHotKeys.swift */,
 				5B0893D4249D5667002A67FC /* WindowMoveCalculator.swift */,
 				5B0893D2249D5624002A67FC /* WindowManager.swift */,
 				5B65D9292485207F00C093A3 /* Assets.xcassets */,
-				5B65D92E2485207F00C093A3 /* Main.storyboard */,
 				5B65D9312485207F00C093A3 /* Info.plist */,
 				5B65D9322485207F00C093A3 /* WindowingHotKeys.entitlements */,
 			);
@@ -264,7 +264,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B65D9302485207F00C093A3 /* Main.storyboard in Resources */,
 				5B65D92A2485207F00C093A3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +298,7 @@
 				5BB5585224879B9500D5E822 /* TopRightQuarterCalculator.swift in Sources */,
 				5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */,
 				5BB5584C24879B1700D5E822 /* BottomLeftQuarterCalculator.swift in Sources */,
+				5BAC768225694DE8007CF286 /* WindowingHotKeys.swift in Sources */,
 				5B65D9412485220000C093A3 /* HotKey.swift in Sources */,
 				5BB55848248798C800D5E822 /* MaximizeCalculator.swift in Sources */,
 				5B65D94D24852D5300C093A3 /* LeftHalfCalculator.swift in Sources */,
@@ -316,17 +316,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5B65D92E2485207F00C093A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B65D92F2485207F00C093A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5B65D9332485207F00C093A3 /* Debug */ = {

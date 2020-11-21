@@ -8,11 +8,12 @@
 
 import SwiftUI
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    let statusItem = StatusItem()
+    var statusItem: StatusItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        statusItem = StatusItem()
+
         // Request accessibility privileges from the user and register the hot
         // keys as soon as they are granted
         requestAccessibilityPrivileges {
