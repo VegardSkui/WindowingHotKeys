@@ -10,33 +10,25 @@ import SwiftUI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
     let statusItem = StatusItem()
-    let windowManager = WindowManager()
-
-    var window: NSWindow!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        HotKeyController.setupEventHandler()
-
+        // Request accessibility privileges from the user and register the hot
+        // keys as soon as they are granted
         requestAccessibilityPrivileges {
-            self.windowManager.setupHotKeys()
+            HotKeyController.setupEventHandler()
+            WindowManager().setupHotKeys()
         }
-
-        if AXIsProcessTrusted() {
-            windowManager.setupHotKeys()
-        }
-    }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
     }
 
     // MARK: - Request Accessibility Privileges
 
     private var requestWindow: NSWindow!
 
-    private func requestAccessibilityPrivileges(completion: @escaping () -> Void) {
+    /// Requests accessibility privileges from the user, calling `grantedHandler` as soon as they are granted (possibly immediately).
+    private func requestAccessibilityPrivileges(grantedHandler: @escaping () -> Void) {
         if AXIsProcessTrusted() {
+            grantedHandler()
             return
         }
 
@@ -53,16 +45,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         requestWindow.contentView = NSHostingView(rootView: view)
         requestWindow.makeKeyAndOrderFront(nil)
 
-        pollAccessibilityPrivileges(completion: completion)
+        pollAccessibilityPrivileges(grantedHandler: grantedHandler)
     }
 
-    private func pollAccessibilityPrivileges(completion: @escaping () -> Void) {
+    /// Checks if accessibility privileges have been granted about every 300 ms, calling `grantedHandler` when they're granted.
+    private func pollAccessibilityPrivileges(grantedHandler: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             if AXIsProcessTrusted() {
                 self.requestWindow.close()
-                completion()
+                grantedHandler()
             } else {
-                self.pollAccessibilityPrivileges(completion: completion)
+                self.pollAccessibilityPrivileges(grantedHandler: grantedHandler)
             }
         }
     }
