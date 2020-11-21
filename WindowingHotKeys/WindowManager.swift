@@ -30,12 +30,17 @@ class WindowManager {
 
     func execute(action: MoveAction) {
         guard let window = AccessibilityWindow.frontmost() else { return }
-        guard let screen = NSScreen.main else { return }
 
         if action == .restore {
             restore(window: window)
             return
         }
+
+        // Get the screen containing the window
+        guard let screen = NSScreen.main else { return }
+
+        // Get the user's primary screen (the screen with the menu bar)
+        guard let primaryScreen = NSScreen.screens.first else { return }
 
         // Update the last user positioned rect entry if the current rect is not
         // equal to the last app positioned rect
@@ -47,12 +52,23 @@ class WindowManager {
             lastUserPositionedRect[identifier] = window.rect
         }
 
+        // Normalize the origin y-coordinate
+        // The global origin for NSScreen positions is the bottom left corner of
+        // the primary screen (y increasing upwards), but the rest of the
+        // application expects the global origin to be the top left corner of
+        // the primary screen (y increasing downwards)
+        let normalizedOriginY = primaryScreen.frame.height - screen.frame.origin.y - screen.frame.height
+
+        // Calculate the height of the top inset (menu bar)
+        let occupiedHeight = screen.frame.height - screen.visibleFrame.height
+        let bottomInsetHeight = screen.visibleFrame.origin.y - screen.frame.origin.y
+        let topInsetHeight = occupiedHeight - bottomInsetHeight
+
         // Calculate the screen frame available to the application, this is the
         // whole screen minus the space used by the menu bar and dock
-        let dockHeight = screen.visibleFrame.origin.y - screen.frame.origin.y
         let availableScreenFrame = CGRect(
             x: screen.visibleFrame.origin.x,
-            y: screen.visibleFrame.origin.y - dockHeight,
+            y: normalizedOriginY + topInsetHeight,
             width: screen.visibleFrame.size.width,
             height: screen.visibleFrame.size.height
         )
