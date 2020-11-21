@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  WindowingHotKeysLauncher.swift
 //  WindowingHotKeysLauncher
 //
 //  Created by Vegard Skui on 01/06/2020.
@@ -8,19 +8,18 @@
 
 import Cocoa
 
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-    let mainBundleIdentifier = "com.vegardskui.WindowingHotKeys"
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+@main
+struct WindowingHotKeysLauncher {
+    static func main() {
         // Determine if the main application is already running
+        let mainBundleIdentifier = "com.vegardskui.WindowingHotKeys"
         let isRunning = !NSRunningApplication.runningApplications(
             withBundleIdentifier: mainBundleIdentifier
         ).isEmpty
 
         // If it's not running, find the root location of the whole application
-        // bundle and launch it, this will launch the main application
+        // bundle and launch it, this will launch the main application, then the
+        // launcher application terminates
         if !isRunning {
             let pathComponents = (Bundle.main.bundlePath as NSString).pathComponents
             let mainPath = NSString.path(
@@ -28,8 +27,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             )
             NSWorkspace.shared.launchApplication(mainPath)
         }
-
-        // Terminate the launcher app
-        NSApp.terminate(nil)
     }
 }

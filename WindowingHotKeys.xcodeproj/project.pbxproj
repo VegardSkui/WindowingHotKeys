@@ -21,6 +21,7 @@
 		5B65D952248530DD00C093A3 /* AXError-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D951248530DD00C093A3 /* AXError-Extensions.swift */; };
 		5B65D954248532B000C093A3 /* AXValue-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D953248532B000C093A3 /* AXValue-Extensions.swift */; };
 		5B65D9582485743700C093A3 /* RightHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65D9572485743700C093A3 /* RightHalfCalculator.swift */; };
+		5B77430B25693EB4008D706C /* WindowingHotKeysLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */; };
 		5BB55848248798C800D5E822 /* MaximizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB55847248798C800D5E822 /* MaximizeCalculator.swift */; };
 		5BB5584A2487998700D5E822 /* CenterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB558492487998700D5E822 /* CenterCalculator.swift */; };
 		5BB5584C24879B1700D5E822 /* BottomLeftQuarterCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */; };
@@ -30,9 +31,6 @@
 		5BE560CE2485938000AD828C /* TopHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CD2485938000AD828C /* TopHalfCalculator.swift */; };
 		5BE560D0248593A800AD828C /* BottomHalfCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560CF248593A800AD828C /* BottomHalfCalculator.swift */; };
 		5BE560D2248598FD00AD828C /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D1248598FD00AD828C /* StatusItem.swift */; };
-		5BE560DA2485A28700AD828C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE560D92485A28700AD828C /* AppDelegate.swift */; };
-		5BE560DE2485A28900AD828C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE560DD2485A28900AD828C /* Assets.xcassets */; };
-		5BE560E42485A28900AD828C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE560E22485A28900AD828C /* Main.storyboard */; };
 		5BE560EB2485A31A00AD828C /* WindowingHotKeysLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -68,6 +66,7 @@
 		5B65D951248530DD00C093A3 /* AXError-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXError-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D953248532B000C093A3 /* AXValue-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXValue-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D9572485743700C093A3 /* RightHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfCalculator.swift; sourceTree = "<group>"; };
+		5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowingHotKeysLauncher.swift; sourceTree = "<group>"; };
 		5BB55847248798C800D5E822 /* MaximizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeCalculator.swift; sourceTree = "<group>"; };
 		5BB558492487998700D5E822 /* CenterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCalculator.swift; sourceTree = "<group>"; };
 		5BB5584B24879B1700D5E822 /* BottomLeftQuarterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLeftQuarterCalculator.swift; sourceTree = "<group>"; };
@@ -78,9 +77,6 @@
 		5BE560CF248593A800AD828C /* BottomHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomHalfCalculator.swift; sourceTree = "<group>"; };
 		5BE560D1248598FD00AD828C /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		5BE560D72485A28700AD828C /* WindowingHotKeysLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowingHotKeysLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BE560D92485A28700AD828C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5BE560DD2485A28900AD828C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BE560E32485A28900AD828C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BE560E52485A28900AD828C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE560E62485A28900AD828C /* WindowingHotKeysLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindowingHotKeysLauncher.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,9 +177,7 @@
 		5BE560D82485A28700AD828C /* WindowingHotKeysLauncher */ = {
 			isa = PBXGroup;
 			children = (
-				5BE560D92485A28700AD828C /* AppDelegate.swift */,
-				5BE560DD2485A28900AD828C /* Assets.xcassets */,
-				5BE560E22485A28900AD828C /* Main.storyboard */,
+				5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */,
 				5BE560E52485A28900AD828C /* Info.plist */,
 				5BE560E62485A28900AD828C /* WindowingHotKeysLauncher.entitlements */,
 			);
@@ -279,8 +273,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE560E42485A28900AD828C /* Main.storyboard in Resources */,
-				5BE560DE2485A28900AD828C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BE560DA2485A28700AD828C /* AppDelegate.swift in Sources */,
+				5B77430B25693EB4008D706C /* WindowingHotKeysLauncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +322,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B65D92F2485207F00C093A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BE560E22485A28900AD828C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BE560E32485A28900AD828C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -507,7 +491,6 @@
 		5BE560E82485A28900AD828C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WindowingHotKeysLauncher/WindowingHotKeysLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -531,7 +514,6 @@
 		5BE560E92485A28900AD828C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WindowingHotKeysLauncher/WindowingHotKeysLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
