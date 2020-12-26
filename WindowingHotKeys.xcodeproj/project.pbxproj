@@ -66,6 +66,7 @@
 		5B65D953248532B000C093A3 /* AXValue-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AXValue-Extensions.swift"; sourceTree = "<group>"; };
 		5B65D9572485743700C093A3 /* RightHalfCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightHalfCalculator.swift; sourceTree = "<group>"; };
 		5B77430A25693EB4008D706C /* WindowingHotKeysLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowingHotKeysLauncher.swift; sourceTree = "<group>"; };
+		5BA8C5A8258F9E6F007FEE0D /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		5BAC768125694DE8007CF286 /* WindowingHotKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowingHotKeys.swift; sourceTree = "<group>"; };
 		5BB55847248798C800D5E822 /* MaximizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximizeCalculator.swift; sourceTree = "<group>"; };
 		5BB558492487998700D5E822 /* CenterCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterCalculator.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5B65D9392485210D00C093A3 /* README.md */,
+				5BA8C5A8258F9E6F007FEE0D /* CHANGELOG.md */,
 				5B65D9242485207D00C093A3 /* WindowingHotKeys */,
 				5BE560D82485A28700AD828C /* WindowingHotKeysLauncher */,
 				5B65D9232485207D00C093A3 /* Products */,
