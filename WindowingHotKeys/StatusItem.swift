@@ -20,6 +20,7 @@ class StatusItem {
         statusItem.button?.image = NSImage(named: "StatusItemIcon")
         statusItem.menu = menu
 
+        // Launch at login
         let launchAtLoginItem = NSMenuItem(
             title: "Launch at Login",
             action: #selector(toggleLaunchAtLogin(_:)),
@@ -29,14 +30,42 @@ class StatusItem {
         launchAtLoginItem.state = launchAtLoginIsEnabled() ? .on : .off
         menu.addItem(launchAtLoginItem)
 
-        menu.addItem(NSMenuItem.separator())
+        menu.addItem(.separator())
 
+        // Hide
+        let hideStatusItem = NSMenuItem(
+            title: "Hide status bar item",
+            action: #selector(hide(_:)),
+            keyEquivalent: ""
+        )
+        hideStatusItem.target = self
+        menu.addItem(hideStatusItem)
+
+        menu.addItem(.separator())
+
+        // Quit
         let quitItem = NSMenuItem(
             title: "Quit",
             action: #selector(NSApplication.terminate(_:)),
             keyEquivalent: "q"
         )
         menu.addItem(quitItem)
+    }
+
+    @objc func hide(_ sender: NSMenuItem?) {
+        // Show the user a confirmation alert
+        let alert = NSAlert()
+        alert.messageText = "Are you sure?"
+        alert.informativeText = "The application cannot easily be quit or restarted after hiding the status bar item, see README for intructions."
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        let response = alert.runModal()
+
+        // Hide the status bar item if the user selected "OK"
+        if response == .alertFirstButtonReturn {
+            NSStatusBar.system.removeStatusItem(statusItem)
+        }
     }
 
     @objc func toggleLaunchAtLogin(_ sender: NSMenuItem?) {

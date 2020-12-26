@@ -19,3 +19,9 @@ Move and resize windows with global hot keys.
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>⏎</kbd> | Maximize             |
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>C</kbd> | Center               |
 | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>⌫</kbd> | Restore              |
+
+### How to quit the app after hiding the status bar item
+
+Open the Terminal, type `kill $(pgrep WindowingHotKeys)` and hit enter. The
+application will then terminate, and can be launched again with the status bar
+item appearing as usual.

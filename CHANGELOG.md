@@ -1,5 +1,11 @@
 # Changelog
 
+## UNRELEASED
+
+### Added
+
+- Option to hide the status bar item (for maximum minimalism)
+
 ## v1.0 - 2020-12-19
 
 ### Added
