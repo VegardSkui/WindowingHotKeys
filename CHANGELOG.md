@@ -6,6 +6,10 @@
 
 - Option to hide the status bar item (for maximum minimalism)
 
+### Changed
+
+- macOS Big Sur style app icon
+
 ## v1.0 - 2020-12-19
 
 ### Added
