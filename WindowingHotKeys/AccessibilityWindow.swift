@@ -38,6 +38,7 @@ class AccessibilityWindow {
         return AccessibilityWindow(focusedWindow as! AXUIElement)
     }
 
+    /// The position of the window relative to the global origin.
     private var position: CGPoint? {
         get {
             var rawValue: AnyObject?
@@ -121,7 +122,7 @@ class AccessibilityWindow {
             return nil
         }
 
-        // Let each window owned by the same process and with the same size and position be a potetial window
+        // Let each window owned by the same process and with the same size and position be a potential window
         let potentialWindows = windowList.filter { info in
             let rect = self.rect
             let bounds = info[kCGWindowBounds] as! Dictionary<String, CGFloat>
