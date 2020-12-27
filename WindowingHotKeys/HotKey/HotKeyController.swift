@@ -119,7 +119,7 @@ class HotKeyController {
         }
 
         info.hotKey.handler()
-        
+
         return noErr
     }
 }
