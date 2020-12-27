@@ -1,6 +1,6 @@
 # Changelog
 
-## UNRELEASED
+## v1.1 - 2020-12-27
 
 ### Added
 
