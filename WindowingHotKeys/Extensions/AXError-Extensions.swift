@@ -6,7 +6,7 @@
 //  Copyright © 2020 Vegard Skui. All rights reserved.
 //
 
-import Foundation
+import ApplicationServices
 
 extension AXError: CustomStringConvertible {
     fileprivate var valueAsString: String {
